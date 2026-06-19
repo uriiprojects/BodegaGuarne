@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bodega 24 · Guarne · Oportunidad de Inversión</title>
 <meta name="description" content="5.091 m² Clase A en el corredor logístico Medellín–Bogotá. TIR arriendo ~20% · obra 6–8 meses. Tickets desde $1.000 MM COP.">
+<meta property="og:title" content="Bodega 24 · Guarne — Oportunidad de Inversión">
+<meta property="og:description" content="5.091 m² Clase A en el corredor logístico Medellín–Bogotá. TIR arriendo ~20%. Tickets desde $1.000 MM COP.">
+<meta property="og:image" content="https://uriiprojects.github.io/BodegaGuarne/hero.jpg">
+<meta property="og:url" content="https://uriiprojects.github.io/BodegaGuarne/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
@@ -617,6 +624,7 @@ footer a:hover { color: var(--orange); }
   <nav class="header-nav">
     <button class="nav-btn nav-btn--ghost" onclick="document.getElementById('simulador').scrollIntoView({behavior:'smooth'})">Simulador</button>
     <a href="proyecto.dc.html" class="nav-btn nav-btn--ghost">El proyecto</a>
+    <button class="nav-btn nav-btn--ghost" onclick="document.getElementById('ronda').scrollIntoView({behavior:'smooth'})">Ronda</button>
     <a href="https://wa.me/573135601480?text=Hola, me interesa Bodega 24 Guarne. Quiero recibir el deck completo."
        target="_blank" class="nav-btn nav-btn--orange">Recibir deck</a>
   </nav>
@@ -636,7 +644,7 @@ footer a:hover { color: var(--orange); }
     </h1>
     <p class="hero-sub">
       5.091 m² Clase A en el corredor logístico más activo de Colombia.
-      Cimentación ejecutada. Obra 6–8 meses promedio. Cimentación ejecutada. TIR arriendo ~20% (flujo + valorización).
+      Cimentación ejecutada. Obra 6–8 meses promedio. TIR arriendo ~20% (flujo + valorización).
     </p>
     <div class="hero-actions">
       <button class="btn btn--orange" onclick="document.getElementById('simulador').scrollIntoView({behavior:'smooth'})">
@@ -1010,6 +1018,69 @@ footer a:hover { color: var(--orange); }
         <div class="tl-label">Entrega y salida</div>
         <div class="tl-desc">Bodega terminada · Elección de salida: venta al precio de mercado o arrendamiento con flujo recurrente</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- RONDA PROGRESS -->
+<section id="ronda" class="section">
+  <div class="container" style="max-width:640px;">
+    <span class="eyebrow">Estado de la ronda</span>
+    <h2 class="display" style="margin-bottom:.5rem;">Ronda abierta</h2>
+    <p style="font-size:.85rem;color:var(--smoke);margin-bottom:2rem;">
+      Tickets limitados. La obra arranca al alcanzar el punto de equilibrio del fondeo.
+    </p>
+    <div style="background:var(--carbon3);border-radius:12px;padding:1.5rem;border:1px solid var(--border);">
+      <div style="display:flex;justify-content:space-between;font-size:.75rem;color:var(--ash);margin-bottom:.5rem;">
+        <span>Comprometido</span>
+        <span id="ronda-pct">35%</span>
+      </div>
+      <div style="background:var(--steel);border-radius:99px;height:14px;overflow:hidden;">
+        <div id="ronda-bar" style="width:35%;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--orange),var(--orange2));transition:width .6s;"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:1rem;gap:1rem;">
+        <div style="text-align:center;flex:1;">
+          <div style="font-family:var(--bebas);font-size:1.5rem;color:var(--orange2);">$6.800 MM</div>
+          <div style="font-size:.68rem;color:var(--smoke);">Comprometido</div>
+        </div>
+        <div style="text-align:center;flex:1;">
+          <div style="font-family:var(--bebas);font-size:1.5rem;color:var(--white);">$19.346 MM</div>
+          <div style="font-size:.68rem;color:var(--smoke);">Meta de ronda</div>
+        </div>
+        <div style="text-align:center;flex:1;">
+          <div style="font-family:var(--bebas);font-size:1.5rem;color:var(--green);">4</div>
+          <div style="font-size:.68rem;color:var(--smoke);">Inversionistas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE URII -->
+<section id="sobre" class="section" style="border-top:1px solid var(--border);">
+  <div class="container" style="max-width:720px;">
+    <span class="eyebrow">Sobre el operador</span>
+    <h2 class="display" style="margin-bottom:1.5rem;">Urii Capital</h2>
+    <p style="font-size:.9rem;color:var(--ash);line-height:1.7;margin-bottom:2rem;">
+      Urii es una firma de desarrollo inmobiliario enfocada en activos logísticos e industriales en el corredor Medellín–Bogotá.
+      Nuestro modelo combina adquisición de lotes a descuento, construcción a costo directo y distribución de retornos a inversionistas privados.
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1.5rem;">
+      <div style="text-align:center;">
+        <div style="font-family:var(--bebas);font-size:2rem;color:var(--orange2);">+5.000 m²</div>
+        <div style="font-size:.72rem;color:var(--smoke);">En desarrollo</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:var(--bebas);font-size:2rem;color:var(--orange2);">Guarne</div>
+        <div style="font-size:.72rem;color:var(--smoke);">Corredor logístico #1</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:var(--bebas);font-size:2rem;color:var(--orange2);">Directo</div>
+        <div style="font-size:.72rem;color:var(--smoke);">Sin intermediarios</div>
+      </div>
+    </div>
+    <div style="margin-top:2rem;text-align:center;">
+      <a href="https://urii.com.co" target="_blank" class="btn btn--wire" style="font-size:.8rem;">Conocer Urii →</a>
     </div>
   </div>
 </section>

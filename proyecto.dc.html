@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:#0C0C0A;color:#F0EDE8;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  *,*::before,*::after{box-sizing:border-box;}
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  ::-webkit-scrollbar{width:3px;}
+  ::-webkit-scrollbar-track{background:#0C0C0A;}
+  ::-webkit-scrollbar-thumb{background:#E85C2A;}
+  @keyframes b24in{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+</style>
+</helmet>
+
+<div style="position:relative;">
+
+<!-- HEADER -->
+<header style="position:fixed;top:0;left:0;right:0;z-index:100;padding:.85rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(12,12,10,.82);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.07);">
+  <div style="display:flex;align-items:center;gap:1.4rem;">
+    <a href="index.html" style="font-size:1.25rem;font-weight:700;color:#FAFAF8;">Urii<span style="color:#E85C2A;">.</span></a>
+    <span style="font-family:'DM Mono',monospace;font-size:.64rem;letter-spacing:.12em;color:#6B6B64;text-transform:uppercase;">Bodega 24 · Proyecto</span>
+  </div>
+  <nav style="display:flex;gap:.4rem;align-items:center;">
+    <a href="index.html#simulador" style="font-size:.72rem;font-weight:500;letter-spacing:.05em;padding:.5rem 1.1rem;border-radius:2px;color:#A8A8A0;border:1px solid #3D3D38;">Calculadora</a>
+    <a href="https://wa.me/573135601480?text=Hola, me interesa la oportunidad de inversi%C3%B3n Bodega 24 Guarne. %C2%BFPodemos hablar%3F" target="_blank" rel="noopener" style="font-size:.72rem;font-weight:500;letter-spacing:.05em;padding:.5rem 1.1rem;border-radius:2px;background:#E85C2A;color:#FAFAF8;">Hablar con Urii</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section data-screen-label="Hero" style="position:relative;min-height:100vh;display:grid;grid-template-rows:1fr auto;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:url('assets/bodegas-reales.jpg') center 40%/cover no-repeat;"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(150deg,rgba(12,12,10,.5) 0%,rgba(12,12,10,.8) 52%,rgba(12,12,10,.98) 100%);"></div>
+  <div style="position:relative;z-index:2;align-self:center;width:100%;max-width:1180px;margin:0 auto;padding:9rem 2.5rem 2rem;">
+    <p style="font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#E85C2A;margin:0 0 1.4rem;animation:b24in .7s .15s both;">Oportunidad de inversión · Real Estate industrial</p>
+    <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(4.2rem,11vw,9.5rem);line-height:.88;letter-spacing:.01em;color:#FAFAF8;margin:0 0 1.1rem;animation:b24in .8s .3s both;">Bodega <span style="color:#E85C2A;">24</span></h1>
+    <p style="font-size:clamp(.95rem,1.5vw,1.15rem);font-weight:300;color:#A8A8A0;max-width:560px;line-height:1.75;margin:0 0 2.4rem;animation:b24in .8s .45s both;">Bodega Clase A de 5.091 m² en el Parque Industrial Guarne, sobre el corredor logístico Medellín–Bogotá. Lote urbanizado y cimentación ya ejecutados: el capital entra sobre obra avanzada.</p>
+    <div style="display:flex;gap:.75rem;flex-wrap:wrap;animation:b24in .8s .6s both;">
+      <a href="index.html#simulador" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.84rem;font-weight:500;letter-spacing:.04em;padding:.95rem 1.9rem;border-radius:1px;background:#E85C2A;color:#FAFAF8;">Calcular mi retorno →</a>
+      <a href="https://wa.me/573135601480?text=Hola, me interesa la oportunidad de inversi%C3%B3n Bodega 24 Guarne. %C2%BFPodemos hablar%3F" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.84rem;font-weight:500;letter-spacing:.04em;padding:.95rem 1.9rem;border-radius:1px;background:transparent;color:#F0EDE8;border:1px solid #3D3D38;">Hablar con Urii</a>
+    </div>
+  </div>
+  <div style="position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.08);display:grid;grid-template-columns:repeat(4,1fr);background:rgba(12,12,10,.35);">
+    <div style="padding:1.5rem 2.5rem;border-right:1px solid rgba(255,255,255,.08);">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:2.4rem;line-height:1;color:#FAFAF8;">5.091</div>
+      <div style="font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:#6B6B64;margin-top:.35rem;">m² · Clase A</div>
+    </div>
+    <div style="padding:1.5rem 2.5rem;border-right:1px solid rgba(255,255,255,.08);">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:2.4rem;line-height:1;color:#E85C2A;">~34%</div>
+      <div style="font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:#6B6B64;margin-top:.35rem;">Descuento de entrada</div>
+    </div>
+    <div style="padding:1.5rem 2.5rem;border-right:1px solid rgba(255,255,255,.08);">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:2.4rem;line-height:1;color:#FAFAF8;">$19.346</div>
+      <div style="font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:#6B6B64;margin-top:.35rem;">MM · Inversión total</div>
+    </div>
+    <div style="padding:1.5rem 2.5rem;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:2.4rem;line-height:1;color:#FAFAF8;">$1.000</div>
+      <div style="font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:#6B6B64;margin-top:.35rem;">MM · Ticket mínimo</div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUMEN -->
+<section data-screen-label="Resumen ejecutivo" style="padding:7rem 0;background:#0C0C0A;">
+  <div style="max-width:1180px;margin:0 auto;padding:0 2.5rem;">
+    <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);">
+      <span style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#E85C2A;display:block;margin-bottom:1rem;">Resumen ejecutivo</span>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,5vw,4.3rem);line-height:.95;letter-spacing:.02em;color:#FAFAF8;margin:0 0 .6rem;">La tesis en seis puntos.</h2>
+      <p style="font-size:.9rem;color:#6B6B64;max-width:560px;line-height:1.75;margin:0;">Un activo industrial Clase A, en ubicación prime, con el riesgo técnico ya ejecutado y una entrada con descuento estructural frente al valor de mercado.</p>
+    </div>
+    <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) .1s,transform .8s cubic-bezier(.2,.7,.2,1) .1s;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#26261f;margin-top:3rem;border:1px solid #26261f;">
+      <div style="background:#161614;padding:2.4rem 1.9rem;">
+        <div style="font-family:'DM Mono',monospace;font-size:.62rem;color:#E85C2A;letter-spacing:.1em;margin-bottom:1.1rem;">01</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.02em;color:#FAFAF8;margin-bottom:.7rem;">Activo Clase A</div>
+        <div style="font-size:.84rem;color:#8a8a82;line-height:1.7;">5.091 m² · altura 12 / 15 m · piso 5 ton/m² · operación tractomula con muelles de cargue.</div>
+      </div>
+      <div style="background:#161614;padding:2.4rem 1.9rem;">
+        <div style="font-family:'DM Mono',monospace;font-size:.62rem;color:#E85C2A;letter-spacing:.1em;margin-bottom:1.1rem;">02</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.02em;color:#FAFAF8;margin-bottom:.7rem;">Ubicación Prime</div>
+        <div style="font-size:.84rem;color:#8a8a82;line-height:1.7;">Parque Industrial Guarne, corredor Medellín–Bogotá. Acceso directo a la autopista, 15 min al aeropuerto.</div>
+      </div>
+      <div style="background:#161614;padding:2.4rem 1.9rem;">
+        <div style="font-family:'DM Mono',monospace;font-size:.62rem;color:#E85C2A;letter-spacing:.1em;margin-bottom:1.1rem;">03</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.02em;color:#FAFAF8;margin-bottom:.7rem;">Riesgo Mitigado</div>
+        <div style="font-size:.84rem;color:#8a8a82;line-height:1.7;">Lote urbanizado + cimentación ejecutada antes de cerrar la ronda. El capital entra sobre obra avanzada.</div>
+      </div>
+      <div style="background:#161614;padding:2.4rem 1.9rem;">
+        <div style="font-family:'DM Mono',monospace;font-size:.62rem;color:#E85C2A;letter-spacing:.1em;margin-bottom:1.1rem;">04</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.02em;color:#FAFAF8;margin-bottom:.7rem;">Tesis de Descuento</div>
+        <div style="font-size:.84rem;color:#8a8a82;line-height:1.7;">Costo all-in ~$3,8M/m² vs valor de mercado ~$5,75M/m² → margen de entrada cercano al 34%.</div>
+      </div>
+      <div style="background:#161614;padding:2.4rem 1.9rem;">
+        <div style="font-family:'DM Mono',monospace;font-size:.62rem;color:#E85C2A;letter-spacing:.1em;margin-bottom:1.1rem;">05</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.02em;color:#FAFAF8;margin-bottom:.7rem;">Estructura de Equity</div>
+        <div style="font-size:.84rem;color:#8a8a82;line-height:1.7;">Lote aportado como equity inicial + ronda de construcción. Equity proporcional · ticket mínimo $1.000 MM.</div>
+      </div>
+      <div style="background:#161614;padding:2.4rem 1.9rem;">
+        <div style="font-family:'DM Mono',monospace;font-size:.62rem;color:#E85C2A;letter-spacing:.1em;margin-bottom:1.1rem;">06</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.02em;color:#FAFAF8;margin-bottom:.7rem;">Salida Flexible</div>
+        <div style="font-size:.84rem;color:#8a8a82;line-height:1.7;">Pre-arriendo en obra, venta durante construcción o arriendo estabilizado a 10 años IPC + 3%.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UBICACION -->
+<section data-screen-label="Ubicación" style="padding:7rem 0;background:#161614;">
+  <div style="max-width:1180px;margin:0 auto;padding:0 2.5rem;">
+    <span data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#E85C2A;display:block;margin-bottom:1rem;">Ubicación y conectividad</span>
+    <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:3.5rem;align-items:center;">
+      <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);">
+        <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,4.5vw,3.8rem);line-height:.95;color:#FAFAF8;margin:0 0 1.5rem;">El corredor logístico<br>más relevante<br>de Colombia.</h2>
+        <p style="font-size:.88rem;color:#8a8a82;line-height:1.85;margin:0;">El Parque Industrial Guarne se ubica en el eje Medellín–Bogotá, con acceso inmediato a la autopista y a 15 minutos del Aeropuerto Internacional José María Córdova. Demanda de bodegas Clase A sostenida y vacancia históricamente baja en el corredor.</p>
+      </div>
+      <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) .1s,transform .8s cubic-bezier(.2,.7,.2,1) .1s;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#26261f;border:1px solid #26261f;">
+        <div style="background:#0C0C0A;padding:1.9rem 1.6rem;"><div style="font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:#E85C2A;line-height:1;">30 min</div><div style="font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#6B6B64;margin-top:.45rem;">Al centro de Medellín</div></div>
+        <div style="background:#0C0C0A;padding:1.9rem 1.6rem;"><div style="font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:#E85C2A;line-height:1;">15 min</div><div style="font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#6B6B64;margin-top:.45rem;">Aeropuerto JMC</div></div>
+        <div style="background:#0C0C0A;padding:1.9rem 1.6rem;"><div style="font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:#E85C2A;line-height:1;">2.150</div><div style="font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#6B6B64;margin-top:.45rem;">msnm · clima estable</div></div>
+        <div style="background:#0C0C0A;padding:1.9rem 1.6rem;"><div style="font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:#E85C2A;line-height:1;">&lt;5%</div><div style="font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#6B6B64;margin-top:.45rem;">Vacancia del corredor</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FICHA TECNICA -->
+<section data-screen-label="Ficha técnica" style="padding:7rem 0;background:#0C0C0A;">
+  <div style="max-width:1180px;margin:0 auto;padding:0 2.5rem;">
+    <span data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#E85C2A;display:block;margin-bottom:1rem;">El producto · ficha técnica</span>
+    <h2 data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s;font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,4.5vw,3.8rem);line-height:.95;color:#FAFAF8;margin:0 0 3rem;">El activo terminado.</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;">
+      <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);position:relative;border:1px solid #3D3D38;overflow:hidden;cursor:zoom-in;" data-src="assets/bodegas-reales.jpg" onClick="{{ openLightbox }}">
+        <img src="assets/bodegas-reales.jpg" alt="Bodega Clase A terminada · Parque Industrial Guarne" style="width:100%;height:100%;object-fit:cover;min-height:100%;"/>
+        <div style="position:absolute;left:1rem;bottom:1rem;font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#F0EDE8;background:rgba(12,12,10,.82);padding:.4rem .8rem;">Foto real · bodega Clase A · Parque Guarne</div>
+      </div>
+      <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) .1s,transform .8s cubic-bezier(.2,.7,.2,1) .1s;">
+        <div style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#6B6B64;margin-bottom:1rem;">Especificaciones</div>
+        <div style="display:flex;flex-direction:column;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.85rem 0;border-top:1px solid rgba(255,255,255,.07);"><span style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:#6B6B64;">Área de huella</span><span style="font-size:.88rem;font-weight:500;color:#E85C2A;text-align:right;">5.091 m²</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.85rem 0;border-top:1px solid rgba(255,255,255,.07);"><span style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:#6B6B64;">Configuración</span><span style="font-size:.88rem;font-weight:500;color:#F0EDE8;text-align:right;">1 módulo · divisible en 2</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.85rem 0;border-top:1px solid rgba(255,255,255,.07);"><span style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:#6B6B64;">Altura libre lateral</span><span style="font-size:.88rem;font-weight:500;color:#F0EDE8;text-align:right;">12 m</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.85rem 0;border-top:1px solid rgba(255,255,255,.07);"><span style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:#6B6B64;">Altura máx. cumbrera</span><span style="font-size:.88rem;font-weight:500;color:#E85C2A;text-align:right;">15 m</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.85rem 0;border-top:1px solid rgba(255,255,255,.07);"><span style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:#6B6B64;">Capacidad de piso</span><span style="font-size:.88rem;font-weight:500;color:#F0EDE8;text-align:right;">5 ton/m²</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.85rem 0;border-top:1px solid rgba(255,255,255,.07);"><span style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:#6B6B64;">Operación vehicular</span><span style="font-size:.88rem;font-weight:500;color:#F0EDE8;text-align:right;">Tractomula / doble troque</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.85rem 0;border-top:1px solid rgba(255,255,255,.07);"><span style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:#6B6B64;">Muelles de cargue</span><span style="font-size:.88rem;font-weight:500;color:#F0EDE8;text-align:right;">Con niveladoras</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.85rem 0;border-top:1px solid rgba(255,255,255,.07);"><span style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:#6B6B64;">Cubierta</span><span style="font-size:.88rem;font-weight:500;color:#F0EDE8;text-align:right;">Lámina térmica aislada</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.85rem 0;border-top:1px solid rgba(255,255,255,.07);"><span style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:#6B6B64;">Iluminación</span><span style="font-size:.88rem;font-weight:500;color:#F0EDE8;text-align:right;">LED industrial</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.85rem 0;border-top:1px solid rgba(255,255,255,.07);"><span style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:#6B6B64;">Oficinas</span><span style="font-size:.88rem;font-weight:500;color:#F0EDE8;text-align:right;">Integradas + baños</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.85rem 0;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);"><span style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:#6B6B64;">Clasificación</span><span style="font-size:.88rem;font-weight:500;color:#E85C2A;text-align:right;">Clase A · estándar int.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTADO DE OBRA -->
+<sc-if value="{{ mostrarLote }}" hint-placeholder-val="{{ true }}">
+<section data-screen-label="Estado de obra" style="padding:7rem 0;background:#161614;">
+  <div style="max-width:1180px;margin:0 auto;padding:0 2.5rem;">
+    <span data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#E85C2A;display:block;margin-bottom:1rem;">Estado actual · factor de seguridad</span>
+    <h2 data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s;font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,4.5vw,3.8rem);line-height:.95;color:#FAFAF8;margin:0 0 .6rem;max-width:780px;">El inversionista entra después de ejecutado el riesgo técnico.</h2>
+    <p data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s .05s,transform .7s .05s;font-size:.9rem;color:#8a8a82;line-height:1.8;max-width:620px;margin:0 0 2.75rem;">Adquisición del lote, urbanismo, diseños y cimentación ya fueron ejecutados y pagados por el desarrollador. El capital protegido entra sobre obra avanzada.</p>
+
+    <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);position:relative;border:1px solid #3D3D38;overflow:hidden;margin-bottom:2.5rem;cursor:zoom-in;" data-src="assets/lote-real.jpg" onClick="{{ openLightbox }}">
+      <img src="assets/lote-real.jpg" alt="Estado actual del lote · cimentación ejecutada" style="width:100%;height:auto;display:block;"/>
+      <div style="position:absolute;left:1rem;bottom:1rem;font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#F0EDE8;background:rgba(12,12,10,.82);padding:.45rem .85rem;">Foto real · lote con cimentación ejecutada · Guarne</div>
+      <div style="position:absolute;right:1rem;top:1rem;font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#0C0C0A;background:#22C55E;padding:.45rem .85rem;font-weight:500;">Capital protegido ✓</div>
+    </div>
+
+    <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) .1s,transform .8s cubic-bezier(.2,.7,.2,1) .1s;display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:#26261f;border:1px solid #26261f;">
+      <div style="background:#161614;padding:1.5rem 1rem;"><div style="font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.06em;color:#22C55E;margin-bottom:.6rem;">EJECUTADO ✓</div><div style="font-size:.78rem;color:#F0EDE8;line-height:1.45;font-weight:500;">Adquisición del lote</div></div>
+      <div style="background:#161614;padding:1.5rem 1rem;"><div style="font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.06em;color:#22C55E;margin-bottom:.6rem;">EJECUTADO ✓</div><div style="font-size:.78rem;color:#F0EDE8;line-height:1.45;font-weight:500;">Urbanismo &amp; servicios</div></div>
+      <div style="background:#161614;padding:1.5rem 1rem;"><div style="font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.06em;color:#22C55E;margin-bottom:.6rem;">EJECUTADO ✓</div><div style="font-size:.78rem;color:#F0EDE8;line-height:1.45;font-weight:500;">Diseños &amp; cotizaciones</div></div>
+      <div style="background:#161614;padding:1.5rem 1rem;border-right:2px solid #E85C2A;"><div style="font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.06em;color:#22C55E;margin-bottom:.6rem;">EJECUTADO ✓</div><div style="font-size:.78rem;color:#F0EDE8;line-height:1.45;font-weight:500;">Cimentación &amp; pilas</div></div>
+      <div style="background:#161614;padding:1.5rem 1rem;"><div style="font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.06em;color:#6B6B64;margin-bottom:.6rem;">PENDIENTE</div><div style="font-size:.78rem;color:#8a8a82;line-height:1.45;">Estructura metálica</div></div>
+      <div style="background:#161614;padding:1.5rem 1rem;"><div style="font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.06em;color:#6B6B64;margin-bottom:.6rem;">PENDIENTE</div><div style="font-size:.78rem;color:#8a8a82;line-height:1.45;">Cubierta &amp; cerramiento</div></div>
+      <div style="background:#161614;padding:1.5rem 1rem;"><div style="font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.06em;color:#6B6B64;margin-bottom:.6rem;">PENDIENTE</div><div style="font-size:.78rem;color:#8a8a82;line-height:1.45;">Acabados &amp; entrega</div></div>
+    </div>
+    <p style="font-family:'DM Mono',monospace;font-size:.62rem;color:#3D3D38;margin-top:1rem;">La línea naranja marca el punto de entrada del inversionista.</p>
+  </div>
+</section>
+</sc-if>
+
+<!-- TESIS DESCUENTO + ESTRUCTURA -->
+<section data-screen-label="Tesis y estructura" style="padding:7rem 0;background:#0C0C0A;">
+  <div style="max-width:1180px;margin:0 auto;padding:0 2.5rem;">
+    <sc-if value="{{ mostrarCinta }}" hint-placeholder-val="{{ true }}">
+    <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);background:#161614;border:1px solid #3D3D38;padding:2.75rem 2.5rem;display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;margin-bottom:4rem;">
+      <div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,8vw,6.5rem);line-height:.85;color:#E85C2A;">~34%</div>
+        <div style="font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#6B6B64;margin-top:.3rem;">Descuento de entrada</div>
+      </div>
+      <div style="border-left:1px solid #3D3D38;padding-left:2.5rem;display:flex;flex-direction:column;gap:1.1rem;">
+        <div style="font-size:.95rem;color:#F0EDE8;line-height:1.7;max-width:480px;">Entras al costo all-in de <strong style="color:#FAFAF8;">$3,8M/m²</strong> frente a un valor de mercado terminado de <strong style="color:#FAFAF8;">$5,75M/m²</strong>. El descuento es tu colchón de seguridad desde el día uno.</div>
+        <div style="display:flex;align-items:center;gap:1rem;font-family:'DM Mono',monospace;font-size:.8rem;"><span style="color:#A8A8A0;">$3,8M/m²</span><span style="flex:1;height:1px;background:linear-gradient(90deg,#3D3D38,#22C55E);"></span><span style="color:#22C55E;">$5,75M/m² mercado</span></div>
+      </div>
+    </div>
+    </sc-if>
+
+    <span data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#E85C2A;display:block;margin-bottom:1rem;">Cap stack &amp; estructura</span>
+    <h2 data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s;font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,4.5vw,3.8rem);line-height:.95;color:#FAFAF8;margin:0 0 2.5rem;">Cómo se arma el capital.</h2>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
+      <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);">
+        <div style="display:flex;flex-direction:column;gap:.9rem;">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.45rem;"><span style="font-size:.82rem;color:#F0EDE8;font-weight:500;">Lote aportado · equity inicial</span><span style="font-family:'DM Mono',monospace;font-size:.78rem;color:#A8A8A0;">~$9.164 MM</span></div>
+            <div style="height:36px;background:#2A2A26;border-radius:1px;overflow:hidden;display:flex;align-items:center;"><div style="height:100%;width:47%;background:#3D3D38;display:flex;align-items:center;padding-left:.7rem;"><span style="font-family:'DM Mono',monospace;font-size:.6rem;color:#A8A8A0;letter-spacing:.06em;">~$1,8M/m²</span></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.45rem;"><span style="font-size:.82rem;color:#F0EDE8;font-weight:500;">Ronda de inversión · construcción</span><span style="font-family:'DM Mono',monospace;font-size:.78rem;color:#E85C2A;">~$10.182 MM</span></div>
+            <div style="height:36px;background:#2A2A26;border-radius:1px;overflow:hidden;display:flex;align-items:center;"><div style="height:100%;width:53%;background:#E85C2A;display:flex;align-items:center;padding-left:.7rem;"><span style="font-family:'DM Mono',monospace;font-size:.6rem;color:#FAFAF8;letter-spacing:.06em;">Ronda $10.000–11.000 MM</span></div></div>
+          </div>
+          <div style="border-top:1px solid #3D3D38;margin-top:.7rem;padding-top:1.1rem;display:flex;justify-content:space-between;align-items:baseline;"><span style="font-family:'DM Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#6B6B64;">Inversión total proyecto</span><span style="font-family:'Bebas Neue',sans-serif;font-size:1.9rem;color:#FAFAF8;line-height:1;">$19.346 MM</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;"><span style="font-family:'DM Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#6B6B64;">Valor de mercado terminado</span><span style="font-family:'Bebas Neue',sans-serif;font-size:1.9rem;color:#22C55E;line-height:1;">~$29.273 MM</span></div>
+        </div>
+      </div>
+      <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) .1s,transform .8s cubic-bezier(.2,.7,.2,1) .1s;background:#161614;border:1px solid #26261f;padding:2rem 1.9rem;">
+        <div style="font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#6B6B64;margin-bottom:1.25rem;">Términos clave</div>
+        <div style="display:flex;flex-direction:column;gap:1.1rem;">
+          <div><div style="font-size:.8rem;color:#E85C2A;font-weight:500;margin-bottom:.2rem;">Vehículo de proyecto</div><div style="font-size:.8rem;color:#8a8a82;line-height:1.6;">SAS / Fideicomiso creado para el proyecto · equity 100%, sin deuda bancaria.</div></div>
+          <div><div style="font-size:.8rem;color:#E85C2A;font-weight:500;margin-bottom:.2rem;">Participación proporcional</div><div style="font-size:.8rem;color:#8a8a82;line-height:1.6;">Cada inversionista recibe equity proporcional a su aporte. Ticket mínimo $1.000 MM.</div></div>
+          <div><div style="font-size:.8rem;color:#E85C2A;font-weight:500;margin-bottom:.2rem;">Gobierno</div><div style="font-size:.8rem;color:#8a8a82;line-height:1.6;">Comité de inversión · auditoría de obra periódica · informes trimestrales.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTRATEGIA DE SALIDA -->
+<section data-screen-label="Estrategia de salida" style="padding:7rem 0;background:#161614;">
+  <div style="max-width:1180px;margin:0 auto;padding:0 2.5rem;">
+    <span data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:#E85C2A;display:block;margin-bottom:1rem;">Estrategia de salida</span>
+    <h2 data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s;font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,4.5vw,3.8rem);line-height:.95;color:#FAFAF8;margin:0 0 2.75rem;">Tres rutas de retorno.</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;">
+      <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);background:#0C0C0A;border:1px solid #26261f;border-top:2px solid #22C55E;padding:2.2rem 1.8rem;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;"><span style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:#FAFAF8;letter-spacing:.04em;">Plan A</span><span style="font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.08em;color:#22C55E;border:1px solid #22C55E;padding:.25rem .5rem;border-radius:2px;">MENOR RIESGO</span></div>
+        <div style="font-size:.95rem;color:#F0EDE8;font-weight:500;margin-bottom:1rem;">Pre-arriendo durante obra</div>
+        <div style="display:flex;flex-direction:column;gap:.6rem;">
+          <div style="font-size:.8rem;color:#8a8a82;line-height:1.55;">Firma de contrato antes de la entrega</div>
+          <div style="font-size:.8rem;color:#8a8a82;line-height:1.55;">Reducción del riesgo de vacancia</div>
+          <div style="font-size:.8rem;color:#8a8a82;line-height:1.55;">Flujo asegurado desde el día uno</div>
+        </div>
+      </div>
+      <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) .08s,transform .8s cubic-bezier(.2,.7,.2,1) .08s;background:#0C0C0A;border:1px solid #26261f;border-top:2px solid #E85C2A;padding:2.2rem 1.8rem;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;"><span style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:#FAFAF8;letter-spacing:.04em;">Plan B</span><span style="font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.08em;color:#E85C2A;border:1px solid #E85C2A;padding:.25rem .5rem;border-radius:2px;">MAYOR LIQUIDEZ</span></div>
+        <div style="font-size:.95rem;color:#F0EDE8;font-weight:500;margin-bottom:1rem;">Venta durante construcción</div>
+        <div style="display:flex;flex-direction:column;gap:.6rem;">
+          <div style="font-size:.8rem;color:#8a8a82;line-height:1.55;">Comprador institucional o corporativo</div>
+          <div style="font-size:.8rem;color:#8a8a82;line-height:1.55;">Captura del spread ~34% en corto plazo</div>
+          <div style="font-size:.8rem;color:#8a8a82;line-height:1.55;">Liquidez anticipada para el vehículo</div>
+        </div>
+      </div>
+      <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) .16s,transform .8s cubic-bezier(.2,.7,.2,1) .16s;background:#0C0C0A;border:1px solid #26261f;border-top:2px solid #F59E0B;padding:2.2rem 1.8rem;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;"><span style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:#FAFAF8;letter-spacing:.04em;">Plan C</span><span style="font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.08em;color:#F59E0B;border:1px solid #F59E0B;padding:.25rem .5rem;border-radius:2px;">MAYOR RETORNO</span></div>
+        <div style="font-size:.95rem;color:#F0EDE8;font-weight:500;margin-bottom:1rem;">Arriendo estabilizado 10 años</div>
+        <div style="display:flex;flex-direction:column;gap:.6rem;">
+          <div style="font-size:.8rem;color:#8a8a82;line-height:1.55;">IPC + 3% de incremento anual</div>
+          <div style="font-size:.8rem;color:#8a8a82;line-height:1.55;">Flujo predecible de largo plazo</div>
+          <div style="font-size:.8rem;color:#8a8a82;line-height:1.55;">Solar fotovoltaico como upside adicional*</div>
+        </div>
+      </div>
+    </div>
+    <p style="font-family:'DM Mono',monospace;font-size:.62rem;color:#3D3D38;margin-top:1.5rem;max-width:680px;line-height:1.6;">* Solar fotovoltaico sujeto a validación de consumo del inquilino y condiciones del parque. Representa potencial de upside no garantizado.</p>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section data-screen-label="CTA" style="padding:8rem 0;background:#0C0C0A;text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Bebas Neue',sans-serif;font-size:28vw;line-height:1;color:rgba(255,255,255,.02);pointer-events:none;white-space:nowrap;">B24</div>
+  <div style="position:relative;max-width:1180px;margin:0 auto;padding:0 2.5rem;">
+    <h2 data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s;font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5.5rem);line-height:.95;color:#FAFAF8;margin:0 0 .75rem;">Calcula tu retorno<br><span style="color:#E85C2A;">e invierte en Bodega 24.</span></h2>
+    <p data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s .05s,transform .7s .05s;font-size:.95rem;color:#6B6B64;margin:0 0 2.5rem;">Tickets disponibles · Ronda abierta · Info room completo en 24 horas</p>
+    <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s .1s,transform .7s .1s;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="index.html#simulador" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.84rem;font-weight:500;letter-spacing:.04em;padding:.95rem 1.9rem;border-radius:1px;background:#E85C2A;color:#FAFAF8;">Ir a la calculadora →</a>
+      <a href="https://wa.me/573135601480?text=Hola, quiero invertir en Bodega 24 Guarne y recibir el info room completo." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.84rem;font-weight:500;letter-spacing:.04em;padding:.95rem 1.9rem;border-radius:1px;background:transparent;color:#F0EDE8;border:1px solid #3D3D38;">Hablar con Alejandro</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#161614;border-top:1px solid rgba(255,255,255,.07);padding:1.75rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+  <a href="index.html" style="font-size:1.1rem;font-weight:700;color:#FAFAF8;">Urii<span style="color:#E85C2A;">.</span></a>
+  <p style="font-size:.72rem;color:#6B6B64;margin:0;">© 2025 Urii Capital · Medellín, Colombia · Documento de presentación — no constituye oferta pública</p>
+  <a href="index.html#simulador" style="font-size:.72rem;color:#6B6B64;">Volver a la calculadora →</a>
+</footer>
+
+</div>
+
+<!-- LIGHTBOX -->
+<sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeLightbox }}" style="position:fixed;inset:0;z-index:300;background:rgba(8,8,7,.95);display:flex;align-items:center;justify-content:center;padding:3rem;cursor:zoom-out;">
+    <img src="{{ lightboxSrc }}" alt="" style="max-width:92vw;max-height:88vh;object-fit:contain;border:1px solid #3D3D38;"/>
+    <div style="position:absolute;top:1.5rem;right:1.75rem;font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.1em;color:#A8A8A0;">CERRAR ✕</div>
+  </div>
+</sc-if>
+
+<template id="__bundler_thumbnail" data-bg-color="#0C0C0A">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0C0C0A"/>
+    <text x="600" y="430" font-family="Impact, sans-serif" font-size="300" fill="#FAFAF8" text-anchor="middle">BODEGA <tspan fill="#E85C2A">24</tspan></text>
+    <text x="600" y="520" font-family="monospace" font-size="34" letter-spacing="10" fill="#6B6B64" text-anchor="middle">URII · GUARNE</text>
+  </svg>
+</template></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;mostrarLoteReal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;mostrarCintaDescuento&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { lightbox: null };
+
+  componentDidMount() {
+    const reveal = (el) => { el.style.opacity = 1; el.style.transform = 'none'; el.setAttribute('data-shown', ''); };
+    // Reveal anything already in (or above) the viewport — never leaves content stuck hidden.
+    const sweep = () => {
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      document.querySelectorAll('[data-reveal]:not([data-shown])').forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.top < vh * 0.92) reveal(el);
+      });
+    };
+    setTimeout(() => {
+      sweep();
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((ents) => {
+          ents.forEach(en => { if (en.isIntersecting) { reveal(en.target); io.unobserve(en.target); } });
+        }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+        document.querySelectorAll('[data-reveal]:not([data-shown])').forEach(e => io.observe(e));
+      }
+      // Scroll fallback (covers IO never firing) + final guarantee.
+      window.addEventListener('scroll', sweep, { passive: true });
+      setTimeout(() => document.querySelectorAll('[data-reveal]:not([data-shown])').forEach(reveal), 2500);
+    }, 60);
+  }
+
+  renderVals() {
+    return {
+      mostrarLote: this.props.mostrarLoteReal ?? true,
+      mostrarCinta: this.props.mostrarCintaDescuento ?? true,
+      lightboxOpen: !!this.state.lightbox,
+      lightboxSrc: this.state.lightbox || '',
+      openLightbox: (e) => {
+        const t = e.target.closest('[data-src]');
+        if (t) {
+          const img = t.querySelector('img');
+          this.setState({ lightbox: (img && (img.currentSrc || img.src)) || t.getAttribute('data-src') });
+        }
+      },
+      closeLightbox: () => this.setState({ lightbox: null }),
+    };
+  }
+}
+</script>
+</body>
+</html>

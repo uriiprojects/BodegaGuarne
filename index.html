@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bodega 24 · Guarne · Oportunidad de Inversión</title>
+<meta name="description" content="5.091 m² Clase A en el corredor logístico Medellín–Bogotá. TIR arriendo ~20% · obra 6–8 meses. Tickets desde $1.000 MM COP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --carbon:  #0C0C0A;
+  --carbon2: #161614;
+  --carbon3: #1F1F1C;
+  --steel:   #2A2A26;
+  --wire:    #3D3D38;
+  --smoke:   #6B6B64;
+  --ash:     #A8A8A0;
+  --linen:   #F0EDE8;
+  --white:   #FAFAF8;
+  --orange:  #E85C2A;
+  --orange2: #FF6B35;
+  --amber:   #F59E0B;
+  --green:   #22C55E;
+  --border:  rgba(255,255,255,.07);
+
+  --bebas:   'Bebas Neue', Impact, sans-serif;
+  --mono:    'DM Mono', 'Courier New', monospace;
+  --sans:    'DM Sans', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--carbon);
+  color: var(--linen);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font-family: var(--sans); cursor: pointer; border: none; }
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-thumb { background: var(--orange); }
+
+/* ── HEADER ──────────────────────────────────────────────────────── */
+#header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: .9rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: background .3s, border-color .3s;
+  border-bottom: 1px solid transparent;
+}
+#header.scrolled {
+  background: rgba(12,12,10,.95);
+  backdrop-filter: blur(20px);
+  border-bottom-color: var(--border);
+}
+.logo {
+  font-family: var(--sans);
+  font-size: 1.25rem; font-weight: 700;
+  color: var(--white);
+}
+.logo-dot { color: var(--orange); }
+.header-tag {
+  font-family: var(--mono);
+  font-size: .65rem; letter-spacing: .12em;
+  color: var(--smoke); text-transform: uppercase;
+}
+.header-nav { display: flex; gap: .25rem; }
+.nav-btn {
+  font-size: .72rem; font-weight: 500; letter-spacing: .05em;
+  padding: .5rem 1.1rem; border-radius: 2px;
+  transition: all .2s;
+}
+.nav-btn--ghost {
+  background: transparent; color: var(--ash);
+  border: 1px solid var(--wire);
+}
+.nav-btn--ghost:hover { border-color: var(--orange); color: var(--orange); }
+.nav-btn--orange { background: var(--orange); color: var(--white); }
+.nav-btn--orange:hover { background: var(--orange2); }
+
+/* ── HERO ────────────────────────────────────────────────────────── */
+#hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('hero.jpg') center/cover no-repeat;
+  opacity: .25;
+}
+.hero-noise {
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");
+  opacity: .6; pointer-events: none;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, rgba(12,12,10,.4) 0%, rgba(12,12,10,.85) 60%, rgba(12,12,10,1) 100%);
+}
+
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 10rem 2.5rem 3rem;
+  max-width: 1100px;
+}
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: .68rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--orange); margin-bottom: 1.5rem;
+  opacity: 0; animation: slideIn .6s .3s forwards;
+}
+.hero-title {
+  font-family: var(--bebas);
+  font-size: clamp(5rem, 11vw, 10rem);
+  line-height: .92; letter-spacing: .01em;
+  color: var(--white); margin-bottom: 1rem;
+  opacity: 0; animation: slideIn .7s .5s forwards;
+}
+.hero-title-accent { color: var(--orange); }
+.hero-sub {
+  font-size: clamp(.9rem, 1.5vw, 1.1rem);
+  font-weight: 300; color: var(--ash);
+  max-width: 520px; line-height: 1.75;
+  margin-bottom: 2.5rem;
+  opacity: 0; animation: slideIn .7s .7s forwards;
+}
+.hero-actions {
+  display: flex; gap: .75rem; flex-wrap: wrap;
+  opacity: 0; animation: slideIn .7s .9s forwards;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .82rem; font-weight: 500; letter-spacing: .05em;
+  padding: .9rem 1.8rem; border-radius: 1px;
+  transition: all .2s;
+}
+.btn--orange { background: var(--orange); color: var(--white); }
+.btn--orange:hover { background: var(--orange2); transform: translateY(-1px); }
+.btn--wire {
+  background: transparent; color: var(--linen);
+  border: 1px solid var(--wire);
+}
+.btn--wire:hover { border-color: var(--linen); }
+
+/* Hero stats bar */
+.hero-stats {
+  position: relative; z-index: 2;
+  border-top: 1px solid var(--border);
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+.hero-stat {
+  padding: 1.5rem 2.5rem;
+  border-right: 1px solid var(--border);
+  opacity: 0; animation: fadeUp .6s forwards;
+}
+.hero-stat:nth-child(1) { animation-delay: 1.0s; }
+.hero-stat:nth-child(2) { animation-delay: 1.1s; }
+.hero-stat:nth-child(3) { animation-delay: 1.2s; }
+.hero-stat:nth-child(4) { animation-delay: 1.3s; border-right: none; }
+.stat-val {
+  font-family: var(--bebas);
+  font-size: 2.4rem; line-height: 1;
+  color: var(--white);
+}
+.stat-val--orange { color: var(--orange); }
+.stat-key {
+  font-family: var(--mono);
+  font-size: .6rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--smoke); margin-top: .35rem;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── SECTIONS ────────────────────────────────────────────────────── */
+.section { padding: 6rem 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2.5rem; }
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: .65rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--orange); display: block; margin-bottom: 1rem;
+}
+.display {
+  font-family: var(--bebas);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  line-height: .95; letter-spacing: .02em;
+  color: var(--white);
+}
+
+/* ── AUDIENCIA TABS ──────────────────────────────────────────────── */
+.audience-switch {
+  display: flex; border: 1px solid var(--wire);
+  border-radius: 2px; overflow: hidden; margin-bottom: 3rem;
+  max-width: 420px;
+}
+.aud-btn {
+  flex: 1; padding: .75rem 1.5rem;
+  font-size: .8rem; font-weight: 500; letter-spacing: .05em;
+  background: transparent; color: var(--smoke);
+  transition: all .2s; border-right: 1px solid var(--wire);
+}
+.aud-btn:last-child { border-right: none; }
+.aud-btn.active { background: var(--orange); color: var(--white); }
+
+.aud-panel { display: none; }
+.aud-panel.active { display: block; }
+
+/* ── SIMULADOR ───────────────────────────────────────────────────── */
+#simulador { background: var(--carbon2); }
+
+.sim-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem; align-items: start;
+}
+
+/* Sliders */
+.sim-controls { display: flex; flex-direction: column; gap: 2rem; }
+
+.sim-field label {
+  font-family: var(--mono);
+  font-size: .65rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--smoke); display: block; margin-bottom: .85rem;
+}
+.sim-field-val {
+  font-family: var(--bebas);
+  font-size: 2.2rem; color: var(--white); line-height: 1;
+  margin-bottom: .75rem;
+}
+.sim-field-val span { color: var(--orange); }
+
+/* Custom range slider */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%; height: 3px;
+  background: var(--wire); border-radius: 2px; outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--orange); cursor: pointer;
+  border: 2px solid var(--carbon);
+  box-shadow: 0 0 0 3px rgba(232,92,42,.2);
+  transition: box-shadow .2s;
+}
+input[type=range]::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 6px rgba(232,92,42,.25);
+}
+.slider-labels {
+  display: flex; justify-content: space-between;
+  font-family: var(--mono);
+  font-size: .6rem; color: var(--wire); margin-top: .4rem;
+}
+
+/* Toggle escenario */
+.escenario-toggle {
+  display: flex; gap: .35rem; margin-bottom: 2rem;
+}
+.esc-btn {
+  flex: 1; padding: .6rem .5rem;
+  font-family: var(--mono);
+  font-size: .68rem; letter-spacing: .06em; text-align: center;
+  background: var(--steel); color: var(--smoke);
+  border: 1px solid var(--wire); border-radius: 1px;
+  transition: all .2s;
+}
+.esc-btn.active {
+  background: var(--orange); color: var(--white);
+  border-color: var(--orange);
+}
+
+/* Resultado */
+.sim-result {
+  background: var(--carbon3);
+  border: 1px solid var(--wire);
+  border-radius: 2px; padding: 2rem;
+  position: sticky; top: 6rem;
+}
+.result-header {
+  font-family: var(--mono);
+  font-size: .62rem; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--smoke); padding-bottom: 1rem;
+  border-bottom: 1px solid var(--wire); margin-bottom: 1.5rem;
+}
+
+.result-big {
+  font-family: var(--bebas);
+  font-size: 3.5rem; line-height: 1; color: var(--green);
+  margin-bottom: .25rem;
+}
+.result-big-label {
+  font-family: var(--mono);
+  font-size: .62rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--smoke); margin-bottom: 1.5rem;
+}
+
+.result-rows { display: flex; flex-direction: column; gap: 0; }
+.result-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .75rem 0; border-bottom: 1px solid rgba(255,255,255,.04);
+}
+.result-row:last-child { border-bottom: none; }
+.result-row-label {
+  font-size: .78rem; color: var(--smoke);
+}
+.result-row-val {
+  font-family: var(--mono);
+  font-size: .82rem; font-weight: 500; color: var(--linen);
+}
+.result-row-val--green { color: var(--green); }
+.result-row-val--orange { color: var(--orange); }
+
+.result-disclaimer {
+  font-size: .68rem; color: var(--wire);
+  line-height: 1.6; margin-top: 1.25rem; padding-top: 1rem;
+  border-top: 1px solid var(--wire);
+}
+
+.result-cta {
+  margin-top: 1.5rem;
+  display: flex; flex-direction: column; gap: .5rem;
+}
+.result-cta a {
+  display: flex; align-items: center; justify-content: center; gap: .5rem;
+  padding: .85rem; border-radius: 1px;
+  font-size: .8rem; font-weight: 500; letter-spacing: .04em;
+  transition: all .2s;
+}
+.cta--primary { background: var(--orange); color: var(--white); }
+.cta--primary:hover { background: var(--orange2); }
+.cta--secondary {
+  background: transparent; color: var(--ash);
+  border: 1px solid var(--wire);
+}
+.cta--secondary:hover { border-color: var(--ash); color: var(--white); }
+
+/* ── ACTIVO / TEASER ─────────────────────────────────────────────── */
+#activo { background: var(--carbon); }
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem; align-items: start;
+}
+
+.specs-img {
+  position: relative;
+  aspect-ratio: 16/10; overflow: hidden;
+  border: 1px solid var(--wire);
+}
+.specs-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .6s;
+}
+.specs-img:hover img { transform: scale(1.03); }
+.specs-img-tag {
+  position: absolute; bottom: 1rem; left: 1rem;
+  font-family: var(--mono);
+  font-size: .6rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--linen); background: rgba(12,12,10,.8);
+  padding: .35rem .75rem;
+}
+
+.specs-list { display: flex; flex-direction: column; gap: 0; }
+.spec-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  padding: .9rem 0; border-bottom: 1px solid var(--border);
+  gap: 1rem;
+}
+.spec-row:first-child { border-top: 1px solid var(--border); }
+.spec-key {
+  font-family: var(--mono);
+  font-size: .65rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--smoke);
+}
+.spec-val {
+  font-size: .88rem; font-weight: 500; color: var(--linen);
+  text-align: right;
+}
+.spec-val--highlight { color: var(--orange); }
+
+/* ── ESTRUCTURA INVERSIÓN ────────────────────────────────────────── */
+#estructura { background: var(--carbon2); }
+
+.estructura-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5px;
+  background: var(--wire); margin-top: 3rem;
+}
+.est-block {
+  background: var(--carbon2); padding: 2.5rem 2rem;
+  position: relative; overflow: hidden;
+  transition: background .2s;
+}
+.est-block:hover { background: var(--carbon3); }
+.est-num {
+  font-family: var(--bebas);
+  font-size: 4rem; line-height: 1; color: var(--orange);
+  opacity: .15; position: absolute; top: 1rem; right: 1.5rem;
+}
+.est-icon {
+  font-size: 1.5rem; margin-bottom: 1rem;
+  color: var(--orange);
+}
+.est-title {
+  font-family: var(--bebas);
+  font-size: 1.6rem; letter-spacing: .03em;
+  color: var(--white); margin-bottom: .75rem;
+}
+.est-desc {
+  font-size: .82rem; color: var(--smoke); line-height: 1.75;
+}
+.est-detail {
+  margin-top: 1.25rem; padding-top: 1.25rem;
+  border-top: 1px solid var(--wire);
+  font-family: var(--mono);
+  font-size: .68rem; color: var(--orange); letter-spacing: .06em;
+}
+
+/* ── MERCADO ─────────────────────────────────────────────────────── */
+#mercado { background: var(--carbon); }
+
+.mercado-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem;
+}
+.mercado-chart { display: flex; flex-direction: column; gap: 1rem; }
+.chart-row { display: flex; flex-direction: column; gap: .35rem; }
+.chart-label {
+  display: flex; justify-content: space-between;
+  font-size: .78rem; color: var(--ash);
+}
+.chart-label span:last-child {
+  font-family: var(--mono); font-size: .72rem; color: var(--linen);
+}
+.chart-bar-bg {
+  height: 6px; background: var(--steel); border-radius: 3px; overflow: hidden;
+}
+.chart-bar {
+  height: 100%; border-radius: 3px;
+  background: var(--orange);
+  transition: width 1s ease;
+}
+.chart-bar--green { background: var(--green); }
+.chart-bar--amber { background: var(--amber); }
+
+.mercado-text h3 {
+  font-family: var(--bebas);
+  font-size: 2.2rem; color: var(--white); margin-bottom: 1.5rem;
+}
+.mercado-text p {
+  font-size: .88rem; color: var(--smoke); line-height: 1.85;
+  margin-bottom: 1rem;
+}
+.mercado-kpis {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem;
+}
+.mkpi {
+  background: var(--carbon2); padding: 1.25rem;
+  border: 1px solid var(--wire); border-radius: 1px;
+}
+.mkpi-val {
+  font-family: var(--bebas); font-size: 1.8rem;
+  color: var(--orange); line-height: 1; margin-bottom: .25rem;
+}
+.mkpi-key {
+  font-family: var(--mono); font-size: .6rem;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--smoke);
+}
+
+/* ── TIMELINE ────────────────────────────────────────────────────── */
+#timeline { background: var(--carbon2); }
+
+.timeline-track {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 0; margin-top: 3rem; position: relative;
+}
+.timeline-track::before {
+  content: '';
+  position: absolute; top: 22px; left: 10%; right: 10%;
+  height: 1px; background: var(--wire);
+}
+.tl-item { padding: 0 1.5rem; position: relative; }
+.tl-dot {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--orange); margin: 0 auto 1.5rem;
+  position: relative; z-index: 1;
+  box-shadow: 0 0 0 4px var(--carbon2), 0 0 0 6px rgba(232,92,42,.2);
+}
+.tl-item:first-child .tl-dot { background: var(--green); }
+.tl-month {
+  font-family: var(--mono); font-size: .62rem;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--orange); margin-bottom: .5rem; text-align: center;
+}
+.tl-label {
+  font-family: var(--bebas); font-size: 1.25rem;
+  color: var(--white); text-align: center; margin-bottom: .35rem;
+}
+.tl-desc {
+  font-size: .75rem; color: var(--smoke);
+  text-align: center; line-height: 1.6;
+}
+
+/* ── CTA FINAL ───────────────────────────────────────────────────── */
+#cta-final {
+  background: var(--carbon);
+  padding: 8rem 0;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+#cta-final::before {
+  content: 'B24';
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  font-family: var(--bebas);
+  font-size: 28vw; line-height: 1;
+  color: rgba(255,255,255,.02);
+  pointer-events: none; white-space: nowrap;
+}
+#cta-final h2 {
+  font-family: var(--bebas);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  color: var(--white); margin-bottom: .75rem;
+  position: relative;
+}
+#cta-final h2 em { color: var(--orange); font-style: normal; }
+#cta-final p {
+  font-size: .95rem; color: var(--smoke);
+  margin-bottom: 2.5rem; position: relative;
+}
+.cta-actions {
+  display: flex; gap: 1rem; justify-content: center;
+  flex-wrap: wrap; position: relative;
+}
+
+/* ── FOOTER ──────────────────────────────────────────────────────── */
+footer {
+  background: var(--carbon2);
+  border-top: 1px solid var(--border);
+  padding: 1.75rem 2.5rem;
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+}
+footer .logo { font-size: 1.1rem; }
+footer p { font-size: .72rem; color: var(--smoke); }
+footer a { font-size: .72rem; color: var(--smoke); transition: color .2s; }
+footer a:hover { color: var(--orange); }
+
+/* ── STICKY MOBILE ───────────────────────────────────────────────── */
+.sticky-mobile {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+  background: var(--orange); padding: 1rem 2rem; text-align: center;
+}
+.sticky-mobile a { font-size: .88rem; font-weight: 500; color: var(--white); }
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .sim-grid { grid-template-columns: 1fr; }
+  .sim-result { position: static; }
+  .specs-grid { grid-template-columns: 1fr; }
+  .estructura-grid { grid-template-columns: 1fr; }
+  .mercado-grid { grid-template-columns: 1fr; }
+  .timeline-track { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .hero-stats { grid-template-columns: repeat(2,1fr); }
+  .sticky-mobile { display: block; }
+  body { padding-bottom: 56px; }
+}
+@media (max-width: 600px) {
+  .hero-content { padding: 8rem 1.5rem 2rem; }
+  .hero-stats .hero-stat { padding: 1.25rem 1.5rem; }
+  .timeline-track { grid-template-columns: 1fr; }
+  .timeline-track::before { display: none; }
+  .mercado-kpis { grid-template-columns: 1fr; }
+  .cta-actions { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- WA Float -->
+<a href="https://wa.me/573135601480?text=Hola, me interesa la oportunidad de inversión Bodega 24 Guarne. ¿Podemos hablar?"
+   target="_blank" rel="noopener"
+   style="position:fixed;bottom:1.75rem;right:1.75rem;z-index:150;
+          background:#25D366;color:#fff;width:50px;height:50px;border-radius:50%;
+          display:flex;align-items:center;justify-content:center;
+          box-shadow:0 4px 20px rgba(37,211,102,.3);transition:transform .2s;"
+   onmouseover="this.style.transform='scale(1.1)'"
+   onmouseout="this.style.transform='scale(1)'">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- Header -->
+<header id="header">
+  <div style="display:flex;align-items:center;gap:1.5rem;">
+    <a href="https://urii.com.co" class="logo">Urii<span class="logo-dot">.</span></a>
+    <span class="header-tag">Bodega 24 · Guarne</span>
+  </div>
+  <nav class="header-nav">
+    <button class="nav-btn nav-btn--ghost" onclick="document.getElementById('simulador').scrollIntoView({behavior:'smooth'})">Simulador</button>
+    <a href="https://wa.me/573135601480?text=Hola, me interesa Bodega 24 Guarne. Quiero recibir el deck completo."
+       target="_blank" class="nav-btn nav-btn--orange">Recibir deck</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-noise"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Parque Industrial Guarne · Autopista Medellín–Bogotá · Retorno 8</p>
+    <h1 class="hero-title">
+      Bodega<br>
+      <span class="hero-title-accent">24</span>
+    </h1>
+    <p class="hero-sub">
+      5.091 m² Clase A en el corredor logístico más activo de Colombia.
+      Cimentación ejecutada. Obra 6–8 meses promedio. Cimentación ejecutada. TIR arriendo ~20% (flujo + valorización).
+    </p>
+    <div class="hero-actions">
+      <button class="btn btn--orange" onclick="document.getElementById('simulador').scrollIntoView({behavior:'smooth'})">
+        Simular mi retorno
+      </button>
+      <a href="https://wa.me/573135601480?text=Hola, me interesa Bodega 24 Guarne. Quiero recibir el deck completo."
+         target="_blank" class="btn btn--wire">Recibir deck completo</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="stat-val">5.091</div>
+      <div class="stat-key">m² · Clase A</div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-val stat-val--orange">~20%</div>
+      <div class="stat-key">TIR arriendo · 5 años</div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-val">6–8</div>
+      <div class="stat-key">Meses obra · promedio</div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-val">$1.000 MM</div>
+      <div class="stat-key">Ticket mínimo COP</div>
+    </div>
+  </div>
+</section>
+
+<!-- SIMULADOR -->
+<section id="simulador" class="section">
+  <div class="container">
+    <span class="eyebrow">Simulador interactivo</span>
+    <h2 class="display" style="margin-bottom:2.5rem;">Tu retorno,<br>en tiempo real.</h2>
+
+    <!-- Escenario toggle -->
+    <div class="escenario-toggle" style="max-width:360px;">
+      <button class="esc-btn active" id="btn-venta" onclick="setEscenario('venta')">Escenario venta</button>
+      <button class="esc-btn" id="btn-arriendo" onclick="setEscenario('arriendo')">Escenario arriendo</button>
+    </div>
+
+    <div class="sim-grid">
+      <!-- Controls -->
+      <div class="sim-controls">
+
+        <div class="sim-field">
+          <label>Ticket de inversión</label>
+          <div class="sim-field-val">$<span id="lbl-ticket">1.000</span> MM COP</div>
+          <input type="range" id="slider-ticket" min="1000" max="5000" step="250" value="1000"
+                 oninput="updateSim()">
+          <div class="slider-labels"><span>$1.000 MM</span><span>$5.000 MM</span></div>
+        </div>
+
+        <div class="sim-field" id="field-plazo">
+          <label>Plazo estimado de obra</label>
+          <div class="sim-field-val"><span id="lbl-plazo">8</span> meses</div>
+          <input type="range" id="slider-plazo" min="6" max="12" step="1" value="8"
+                 oninput="updateSim()">
+          <div class="slider-labels"><span>6 meses (opt.)</span><span>12 meses (neg.)</span></div>
+        </div>
+
+        <div class="sim-field" id="field-vacancia" style="display:none;">
+          <label>Vacancia estimada</label>
+          <div class="sim-field-val"><span id="lbl-vacancia">5</span>% del tiempo</div>
+          <input type="range" id="slider-vacancia" min="0" max="20" step="5" value="5"
+                 oninput="updateSim()">
+          <div class="slider-labels"><span>0% (plena)</span><span>20% vacancia</span></div>
+        </div>
+
+        <!-- Supuestos -->
+        <div style="background:var(--carbon3);border:1px solid var(--wire);padding:1.25rem;border-radius:1px;">
+          <div style="font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--smoke);margin-bottom:.85rem;">Supuestos del modelo</div>
+          <div style="display:flex;flex-direction:column;gap:.5rem;">
+            <div style="display:flex;justify-content:space-between;font-size:.78rem;">
+              <span style="color:var(--smoke);">Valor de venta/m²</span>
+              <span style="font-family:var(--mono);color:var(--linen);">$5.750.000</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:.78rem;">
+              <span style="color:var(--smoke);">Arriendo/m²/mes</span>
+              <span style="font-family:var(--mono);color:var(--linen);">$28.000</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:.78rem;">
+              <span style="color:var(--smoke);">Costo total/m²</span>
+              <span style="font-family:var(--mono);color:var(--linen);">$3.800.000</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:.78rem;">
+              <span style="color:var(--smoke);">Área total</span>
+              <span style="font-family:var(--mono);color:var(--linen);">5.091 m²</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:.78rem;">
+              <span style="color:var(--smoke);">Inversión total proyecto</span>
+              <span style="font-family:var(--mono);color:var(--linen);">$19.346 MM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resultado -->
+      <div class="sim-result">
+        <div class="result-header" id="result-escenario-label">ESCENARIO: VENTA AL TERMINAR OBRA</div>
+
+        <div class="result-big" id="result-retorno">$524 MM</div>
+        <div class="result-big-label" id="result-retorno-label">Retorno neto estimado</div>
+
+        <div class="result-rows">
+          <div class="result-row">
+            <span class="result-row-label">Tu inversión</span>
+            <span class="result-row-val" id="r-inversion">$1.000 MM</span>
+          </div>
+          <div class="result-row">
+            <span class="result-row-label">% del proyecto</span>
+            <span class="result-row-val" id="r-pct">5.17%</span>
+          </div>
+          <div class="result-row">
+            <span class="result-row-label">Ganancia bruta</span>
+            <span class="result-row-val result-row-val--green" id="r-ganancia">$298 MM</span>
+          </div>
+          <div class="result-row">
+            <span class="result-row-label">ROI sobre tu capital</span>
+            <span class="result-row-val result-row-val--orange" id="r-roi">+29.8%</span>
+          </div>
+          <div class="result-row">
+            <span class="result-row-label">TIR anual estimada</span>
+            <span class="result-row-val result-row-val--orange" id="r-tir">42.3%</span>
+          </div>
+          <div class="result-row" id="row-arriendo-anual" style="display:none;">
+            <span class="result-row-label">Ingreso anual estimado</span>
+            <span class="result-row-val result-row-val--green" id="r-arriendo-anual">—</span>
+          </div>
+          <div class="result-row" id="row-cap-rate" style="display:none;">
+            <span class="result-row-label">Cap rate neto</span>
+            <span class="result-row-val result-row-val--orange" id="r-cap-rate">—</span>
+          </div>
+          <div class="result-row">
+            <span class="result-row-label">Precio entrada vs mercado</span>
+            <span class="result-row-val" style="color:#22C55E;">−34% descuento</span>
+          </div>
+        </div>
+
+        <p class="result-disclaimer">
+          Proyecciones basadas en precios de mercado actuales en el corredor Guarne–Rionegro.
+          No constituyen garantía de rendimiento. Sujeto a condiciones de mercado.
+        </p>
+
+        <div class="result-cta">
+          <a href="https://wa.me/573135601480?text=Hola, me interesa invertir en Bodega 24 Guarne. Simulé un ticket de inversión y quiero más información."
+             target="_blank" class="cta--primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Quiero invertir — hablar con Urii
+          </a>
+          <a href="https://wa.me/573135601480?text=Hola, quiero recibir el deck completo de Bodega 24 Guarne."
+             target="_blank" class="cta--secondary">Recibir deck financiero completo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVO TEASER -->
+<section id="activo" class="section">
+  <div class="container">
+
+    <!-- Audience tabs -->
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.5rem;flex-wrap:wrap;gap:1.5rem;">
+      <div>
+        <span class="eyebrow">El activo</span>
+        <h2 class="display">Bodega 24<br>Parque Industrial Guarne</h2>
+      </div>
+      <div class="audience-switch">
+        <button class="aud-btn active" onclick="setAudience('inv',this)">Inversionista</button>
+        <button class="aud-btn" onclick="setAudience('arr',this)">Arrendatario</button>
+      </div>
+    </div>
+
+    <!-- Panel inversionista -->
+    <div class="aud-panel active" id="panel-inv">
+      <div class="specs-grid">
+        <div>
+          <div class="specs-img">
+            <img src="hero.jpg" alt="Bodega 24 · Guarne"
+                 onerror="this.src='https://placehold.co/800x500/1F1F1C/6B6B64?text=Bodega+24+·+Guarne'">
+            <div class="specs-img-tag">Render · Vista exterior</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--smoke);margin-bottom:1rem;">Ficha técnica · Inversionista</div>
+          <div class="specs-list">
+            <div class="spec-row"><span class="spec-key">Área total</span><span class="spec-val spec-val--highlight">5.091 m²</span></div>
+            <div class="spec-row"><span class="spec-key">Clasificación</span><span class="spec-val">Clase A · Industrial</span></div>
+            <div class="spec-row"><span class="spec-key">Cimentación</span><span class="spec-val spec-val--highlight">Ejecutada ✓</span></div>
+            <div class="spec-row"><span class="spec-key">Plazo obra</span><span class="spec-val">6–8 meses promedio</span></div>
+            <div class="spec-row"><span class="spec-key">Costo total/m²</span><span class="spec-val">$3.800.000</span></div>
+            <div class="spec-row"><span class="spec-key">Valor mercado/m²</span><span class="spec-val spec-val--highlight">$5.750.000</span></div>
+            <div class="spec-row"><span class="spec-key">Arriendo/m²/mes</span><span class="spec-val">$28.000</span></div>
+            <div class="spec-row"><span class="spec-key">Inversión total</span><span class="spec-val">$19.346 MM COP</span></div>
+            <div class="spec-row"><span class="spec-key">Ticket mínimo</span><span class="spec-val spec-val--highlight">$1.000 MM COP</span></div>
+            <div class="spec-row"><span class="spec-key">Estructura</span><span class="spec-val">Equity proporcional</span></div>
+            <div class="spec-row"><span class="spec-key">Gerencia</span><span class="spec-val">Urii Capital</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel arrendatario -->
+    <div class="aud-panel" id="panel-arr">
+      <div class="specs-grid">
+        <div>
+          <div class="specs-img">
+            <img src="hero.jpg" alt="Bodega 24 · Guarne"
+                 onerror="this.src='https://placehold.co/800x500/1F1F1C/6B6B64?text=Bodega+24+·+Guarne'">
+            <div class="specs-img-tag">Render · Vista exterior</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--smoke);margin-bottom:1rem;">Ficha técnica · Arrendatario</div>
+          <div class="specs-list">
+            <div class="spec-row"><span class="spec-key">Área disponible</span><span class="spec-val spec-val--highlight">5.091 m²</span></div>
+            <div class="spec-row"><span class="spec-key">Clasificación</span><span class="spec-val">Bodega Clase A</span></div>
+            <div class="spec-row"><span class="spec-key">Ubicación</span><span class="spec-val">Parque Industrial Guarne</span></div>
+            <div class="spec-row"><span class="spec-key">Acceso</span><span class="spec-val">Autopista Medellín–Bogotá</span></div>
+            <div class="spec-row"><span class="spec-key">Retorno 8</span><span class="spec-val">Vía Antigua Rionegro</span></div>
+            <div class="spec-row"><span class="spec-key">Disponibilidad</span><span class="spec-val spec-val--highlight">6–8 meses</span></div>
+            <div class="spec-row"><span class="spec-key">Canon/m²/mes</span><span class="spec-val">Desde $28.000</span></div>
+            <div class="spec-row"><span class="spec-key">Canon mensual total</span><span class="spec-val spec-val--highlight">~$142 MM/mes</span></div>
+            <div class="spec-row"><span class="spec-key">Contrato mínimo</span><span class="spec-val">3 años</span></div>
+            <div class="spec-row"><span class="spec-key">Muelles de cargue</span><span class="spec-val">Clase A</span></div>
+            <div class="spec-row"><span class="spec-key">Contacto</span><span class="spec-val">alejandro@urii.com.co</span></div>
+          </div>
+          <a href="https://wa.me/573135601480?text=Hola, me interesa arrendar la Bodega 24 en el Parque Industrial Guarne. ¿Podemos hablar?"
+             target="_blank" style="display:inline-flex;align-items:center;gap:.5rem;margin-top:1.5rem;padding:.85rem 1.75rem;background:var(--orange);color:var(--white);font-size:.82rem;font-weight:500;border-radius:1px;transition:background .2s;"
+             onmouseover="this.style.background='#FF6B35'"
+             onmouseout="this.style.background='#E85C2A'">
+            Consultar disponibilidad →
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ESTRUCTURA INVERSIÓN -->
+<section id="estructura" class="section">
+  <div class="container">
+    <span class="eyebrow">Estructura del negocio</span>
+    <h2 class="display">Cómo funciona<br>la inversión.</h2>
+
+    <div class="estructura-grid">
+      <div class="est-block">
+        <div class="est-num">01</div>
+        <div class="est-icon">⬡</div>
+        <div class="est-title">Entras al costo</div>
+        <div class="est-desc">
+          Tu capital financia la construcción. Entras a $3.8 MM/m² — un 34% por debajo del valor de mercado terminado de $5.75 MM/m². El descuento es tu colchón de seguridad desde el día uno.
+        </div>
+        <div class="est-detail">$3.800.000/m² vs $5.750.000/m² mercado</div>
+      </div>
+      <div class="est-block">
+        <div class="est-num">02</div>
+        <div class="est-icon">◈</div>
+        <div class="est-title">Equity proporcional</div>
+        <div class="est-desc">
+          Cada inversionista recibe participación proporcional al capital aportado. Sin deuda bancaria, sin pagos de intereses. Tu retorno viene del activo, no de instrumentos financieros.
+        </div>
+        <div class="est-detail">Ticket mínimo $1.000 MM · Ronda $19.346 MM</div>
+      </div>
+      <div class="est-block">
+        <div class="est-num">03</div>
+        <div class="est-icon">◎</div>
+        <div class="est-title">Dos salidas claras</div>
+        <div class="est-desc">
+          Al terminar la obra tienes dos opciones de salida: vender tu participación al precio de mercado, o mantenerla arrendada generando flujo recurrente más valorización del activo.
+        </div>
+        <div class="est-detail">Venta: opción de salida · Arriendo: TIR ~20% (flujo + valorización)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MERCADO -->
+<section id="mercado" class="section">
+  <div class="container">
+    <span class="eyebrow">Contexto de mercado</span>
+    <div class="mercado-grid">
+      <div>
+        <h3 class="display" style="margin-bottom:2rem;">El corredor<br>más activo<br>de Colombia.</h3>
+        <p>Guarne está en el corazón del corredor logístico Medellín–Bogotá, con acceso directo desde la Autopista en el Retorno 8. La demanda de bodegas Clase A en el Oriente antioqueño supera la oferta disponible.</p>
+        <p>La vacancia en el segmento industrial del Oriente se mantiene por debajo del 5%. Los precios de arriendo han subido consistentemente en los últimos 3 años.</p>
+        <div class="mercado-kpis">
+          <div class="mkpi">
+            <div class="mkpi-val">&lt;5%</div>
+            <div class="mkpi-key">Vacancia industrial Oriente</div>
+          </div>
+          <div class="mkpi">
+            <div class="mkpi-val">25 min</div>
+            <div class="mkpi-key">Al centro de Medellín</div>
+          </div>
+          <div class="mkpi">
+            <div class="mkpi-val">$28K</div>
+            <div class="mkpi-key">m²/mes · arriendo Clase A</div>
+          </div>
+          <div class="mkpi">
+            <div class="mkpi-val">34%</div>
+            <div class="mkpi-key">Descuento entrada vs mercado</div>
+          </div>
+        </div>
+      </div>
+      <div class="mercado-chart">
+        <div style="font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--smoke);margin-bottom:1.5rem;">Comparativa de retornos anuales</div>
+        <div class="chart-row">
+          <div class="chart-label"><span>Bodega 24 · Venta (TIR)</span><span>42%</span></div>
+          <div class="chart-bar-bg"><div class="chart-bar" style="width:84%"></div></div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label"><span>Bodega 24 · Arriendo (TIR ~20%)</span><span>~20%</span></div>
+          <div class="chart-bar-bg"><div class="chart-bar chart-bar--green" style="width:40%"></div></div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label"><span>Renta variable Colombia</span><span>~15-25%</span></div>
+          <div class="chart-bar-bg"><div class="chart-bar chart-bar--amber" style="width:40%"></div></div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label"><span>CDT bancario (DTF+3%)</span><span>~14%</span></div>
+          <div class="chart-bar-bg"><div class="chart-bar chart-bar--amber" style="width:28%"></div></div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label"><span>Finca raíz residencial</span><span>~12-18%</span></div>
+          <div class="chart-bar-bg"><div class="chart-bar" style="width:30%;background:var(--smoke)"></div></div>
+        </div>
+        <div style="font-size:.68rem;color:var(--wire);margin-top:.75rem;">
+          * Retornos estimados. No constituyen garantía de rendimiento.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" class="section">
+  <div class="container">
+    <span class="eyebrow">Cronograma</span>
+    <h2 class="display" style="margin-bottom:.75rem;">8 meses promedio<br>hasta entrega.</h2>
+    <p style="font-size:.85rem;color:var(--smoke);margin-bottom:3rem;max-width:480px;">
+      Desde el fondeo completo: licencia ~2 meses · obra 6 meses promedio / 8 probable / 12 escenario negativo.
+      El cuello de botella real es la licencia.
+    </p>
+
+    <div class="timeline-track">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-month">Fondeo</div>
+        <div class="tl-label">Punto de equilibrio</div>
+        <div class="tl-desc">Cierre de ronda · Estructura legal · La obra arranca una vez se alcanza el punto de equilibrio del fondeo</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-month">+2 meses</div>
+        <div class="tl-label">Licencia de construcción</div>
+        <div class="tl-desc">Trámite ante Planeación · Cuello de botella del proceso · Cimentación ya ejecutada — ventaja competitiva</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-month">+4 meses</div>
+        <div class="tl-label">Estructura y cubierta</div>
+        <div class="tl-desc">Estructura metálica en pie · Avance visible · Gestión comercial de arrendamiento en paralelo</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-month">+6–8 meses</div>
+        <div class="tl-label">Entrega y salida</div>
+        <div class="tl-desc">Bodega terminada · Elección de salida: venta al precio de mercado o arrendamiento con flujo recurrente</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta-final">
+  <div class="container">
+    <h2>¿Listo para<br><em>invertir en Bodega 24?</em></h2>
+    <p>Tickets disponibles · Ronda abierta · Información completa en 24 horas</p>
+    <div class="cta-actions">
+      <a href="https://wa.me/573135601480?text=Hola, quiero invertir en Bodega 24 Guarne. Simulé mi retorno y quiero más información."
+         target="_blank" class="btn btn--orange">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Hablar con Alejandro
+      </a>
+      <a href="mailto:alejandro@urii.com.co?subject=Bodega 24 Guarne — Solicitud de información"
+         class="btn btn--wire">Escribir por email</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <a href="https://urii.com.co" class="logo">Urii<span class="logo-dot">.</span></a>
+  <p>© 2025 Urii Capital · Medellín, Colombia · Documento de presentación — no constituye oferta pública</p>
+  <a href="https://urii.com.co">Ver todos los proyectos →</a>
+</footer>
+
+<!-- Sticky mobile -->
+<div class="sticky-mobile">
+  <a href="https://wa.me/573135601480?text=Hola, me interesa Bodega 24 Guarne."
+     target="_blank">Invertir en Bodega 24 →</a>
+</div>
+
+<script>
+// ── Header scroll ──────────────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// ── Constants ──────────────────────────────────────────────────────
+const AREA          = 5091;
+const COSTO_M2      = 3_800_000;
+const VENTA_M2      = 5_750_000;
+const ARRIENDO_M2   = 28_000;
+const VALORIZACION  = 0.10; // 10% anual — promedio corredor Guarne/Oriente (mercado industrial Colombia 2024-25)
+const INVERSION_TOTAL = AREA * COSTO_M2; // $19.345.800.000
+
+let escenario = 'venta';
+
+// ── TIR por flujos (Newton-Raphson) ───────────────────────────────
+function calcTIR(flujos) {
+  let r = 0.1;
+  for (let i = 0; i < 200; i++) {
+    let npv = 0, dnpv = 0;
+    flujos.forEach((f, t) => {
+      npv  += f / Math.pow(1 + r, t);
+      dnpv -= t * f / Math.pow(1 + r, t + 1);
+    });
+    if (Math.abs(npv) < 1) break;
+    r -= npv / dnpv;
+    if (r < -0.99) r = -0.99;
+  }
+  return r;
+}
+
+// ── Escenario toggle ───────────────────────────────────────────────
+function setEscenario(e) {
+  escenario = e;
+  document.getElementById('btn-venta').classList.toggle('active', e === 'venta');
+  document.getElementById('btn-arriendo').classList.toggle('active', e === 'arriendo');
+  document.getElementById('field-plazo').style.display    = e === 'venta' ? '' : 'none';
+  document.getElementById('field-vacancia').style.display = e === 'arriendo' ? '' : 'none';
+  document.getElementById('row-arriendo-anual').style.display = e === 'arriendo' ? '' : 'none';
+  document.getElementById('row-cap-rate').style.display       = e === 'arriendo' ? '' : 'none';
+  updateSim();
+}
+
+// ── Simulator ─────────────────────────────────────────────────────
+function updateSim() {
+  const ticket   = parseInt(document.getElementById('slider-ticket').value) * 1_000_000;
+  const plazo    = parseInt(document.getElementById('slider-plazo').value);
+  const vacancia = parseInt(document.getElementById('slider-vacancia').value) / 100;
+
+  document.getElementById('lbl-ticket').textContent = (ticket / 1_000_000).toLocaleString('es-CO');
+  document.getElementById('lbl-plazo').textContent  = plazo;
+  document.getElementById('lbl-vacancia').textContent = parseInt(document.getElementById('slider-vacancia').value);
+
+  const pct = ticket / INVERSION_TOTAL;
+
+  if (escenario === 'venta') {
+    // Venta: opción de salida — no garantizada al cierre
+    // TIR calculada sobre flujos reales: -inversión mes 0, +retorno venta al mes plazo
+    const valor_venta = AREA * VENTA_M2;
+    const mi_venta    = valor_venta * pct;
+    const ganancia    = mi_venta - ticket;
+    const roi         = ganancia / ticket;
+
+    // Flujos mensuales: desembolso mes 0, retorno en mes plazo
+    const flujos = new Array(plazo + 1).fill(0);
+    flujos[0]     = -ticket;
+    flujos[plazo] = mi_venta;
+    const tir_mensual = calcTIR(flujos);
+    const tir_anual   = Math.pow(1 + tir_mensual, 12) - 1;
+
+    document.getElementById('result-escenario-label').textContent = `OPCIÓN DE SALIDA: VENTA (mes ${plazo})`;
+    document.getElementById('result-retorno').textContent = fmt(mi_venta);
+    document.getElementById('result-retorno-label').textContent = 'Retorno total si se vende al precio de mercado';
+    document.getElementById('r-inversion').textContent = fmt(ticket);
+    document.getElementById('r-pct').textContent = (pct * 100).toFixed(2) + '%';
+    document.getElementById('r-ganancia').textContent = '+' + fmt(ganancia);
+    document.getElementById('r-roi').textContent = '+' + (roi * 100).toFixed(1) + '%';
+    document.getElementById('r-tir').textContent = (tir_anual * 100).toFixed(1) + '% anual';
+
+  } else {
+    // Arriendo: TIR real = flujos de arriendo anuales + valor de salida con valorización
+    // Horizonte de análisis: 5 años
+    const HORIZONTE = 5;
+    const arriendo_bruto = AREA * ARRIENDO_M2 * 12;
+    const arriendo_neto  = arriendo_bruto * (1 - vacancia) * 0.85; // 85% neto tras costos op.
+    const mi_arriendo    = arriendo_neto * pct;
+    const cap_rate       = arriendo_neto / INVERSION_TOTAL;
+
+    // Valor del activo crece con valorización anual
+    const valor_salida_5y = AREA * VENTA_M2 * Math.pow(1 + VALORIZACION, HORIZONTE);
+    const mi_salida_5y    = valor_salida_5y * pct;
+
+    // Flujos anuales: año 0 = -inversión, años 1-4 = arriendo, año 5 = arriendo + venta
+    const flujos_arr = [-ticket];
+    for (let y = 1; y <= HORIZONTE; y++) {
+      flujos_arr.push(y < HORIZONTE ? mi_arriendo : mi_arriendo + mi_salida_5y);
+    }
+    const tir_arr = calcTIR(flujos_arr);
+
+    document.getElementById('result-escenario-label').textContent = 'OPCIÓN DE SALIDA: ARRIENDO (5 años)';
+    document.getElementById('result-retorno').textContent = fmt(mi_arriendo);
+    document.getElementById('result-retorno-label').textContent = 'Ingreso anual estimado (año 1)';
+    document.getElementById('r-inversion').textContent = fmt(ticket);
+    document.getElementById('r-pct').textContent = (pct * 100).toFixed(2) + '%';
+    document.getElementById('r-ganancia').textContent = fmt(mi_arriendo) + '/año';
+    document.getElementById('r-roi').textContent = (mi_arriendo / ticket * 100).toFixed(1) + '% sobre tu capital';
+    document.getElementById('r-tir').textContent = (tir_arr * 100).toFixed(1) + '% anual (5 años)';
+    document.getElementById('r-arriendo-anual').textContent = fmt(mi_arriendo) + '/año';
+    document.getElementById('r-cap-rate').textContent = (cap_rate * 100).toFixed(1) + '% · +' + (VALORIZACION*100).toFixed(0) + '% valorización';
+  }
+}
+
+function fmt(n) {
+  const mm = n / 1_000_000;
+  return '$' + mm.toLocaleString('es-CO', { maximumFractionDigits: 0 }) + ' MM';
+}
+
+// ── Audience switch ────────────────────────────────────────────────
+function setAudience(panel, btn) {
+  document.querySelectorAll('.aud-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.aud-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('panel-' + panel).classList.add('active');
+}
+
+// Init
+updateSim();
+</script>
+</body>
+</html>
